@@ -5,6 +5,7 @@ const weather = require('./app.js')
 
 
 const app = express()
+const port = process.env.PORT || 3000
 
 console.log(__dirname)
 console.log(__filename)
@@ -130,7 +131,7 @@ app.get('*', (req,res) => {
    })
 })
 
-app.listen(3000, () => {
-    console.log(' Server started on port 3000')
+app.listen(port, () => {
+    console.log(' Server started on port ', port)
 })
 
